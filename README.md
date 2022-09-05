@@ -14,7 +14,7 @@ Ecommerce products through a large number of customers to get a clear view of th
 
 # Preview
 
-This user interface is currently deployed on 
+This user interface is currently deployed on : https://oghene-shop.w3spaces.com/
 
 # Disclaimer
 
