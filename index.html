@@ -1,558 +1,486 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-body{
-  background-color: #efefef;
-}
-/* header */
-header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #efefef;
-    z-index: 100;
-}
-header nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.3);
-    padding: 5px 5%;
-    cursor: pointer;
-}
-header nav .logo{
-    color: #333;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-header nav .logo span{
-    color: #ff9500;
-}
-header nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header nav ul li{
-    display: inline-block;
-    margin: 0px 20px 0px;
-}
-header nav ul li a{
-    color: #333;
-    font-weight: 600;
-}
-header nav ul li a:hover{
-    border-bottom: 2px solid #ff9500;
-    padding-bottom: 5px;
-}
-header nav ul li span{
-    border-bottom: 2px solid #ff9500;
-    padding-bottom: 5px;
-}
-header nav .menu-toggle{
-    display: none;
-}
-@media screen and (max-width: 990px) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1000">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Agbanobi stanley oghenemaro">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <title>Ogheneagba - Ecommerce Store</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            
+            <a href="index.html" class="logo">Oghene<span>Shop</span></a>
     
-    /* javascript */
-    #mobile-menu.is-active .bar:nth-child(2){
-        opacity: 0;
-    }
-    #mobile-menu.is-active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    #mobile-menu.is-active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-@media screen and (max-width: 690px) {
-    header nav .menu-toggle{
-        display: block;
-        cursor: pointer;
-    }
-    header nav .menu-toggle .bar{
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background: #333;
-        display: block;
-    }
-    header nav .menu{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 50px;
-        left: -100%;
-        opacity: 0;
-        transition: all 0.5s ease;
-    }
-    header nav .menu.active{
-        background: rgba(0, 0, 0, 0.918);
-        left: 0;
-        opacity: 1;
-        transition: all 0.5s ease;
-    }
-    header nav .menu li{
-        margin: 10px;
-    }
-    header nav .menu li a{
-        font-weight: 200;
-        font-size: 2rem;
-        color: #fff;
-    }
-    /* javascript */
-    #mobile-menu.is-active .bar:nth-child(2){
-        opacity: 0;
-    }
-    #mobile-menu.is-active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    #mobile-menu.is-active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-/*  header */
+            <ul class="menu">
+              <li><a href="index.html"><span>Home</span></a></li>
+              <li><a href="#new">Shop</a></li>
+              <li><a href="#product">Products</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#"><img src="shopping-bag.png" alt=""></a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <main>
+    <!----banner-->
+      <div class="banner">
+        <div class="left-banner">
+          <div>
+            <h3>Trade-in-offer</h3>
+            <h2>Super value deals</h2>
+            <h2><span>On all products</span></h2>
+            <small>Save more with coupons & up to 50% off!</small>
+            <a href="#shop"><button type="submit" name="button">Shop now</button></a>
+          </div>
+        </div>
+
+        <div class="right-banner">
+          <img src="home-img.png" alt="">
+        </div>
+      </div>
+    <!----banner-->
+
+    <!--featured-products--->
+    <div class="all-products">
+        <div class="title">
+            <h1>featured products</h1>
+            <small>Summer Collection New Modern Design</small>
+        </div>
+    
+        <div class="products">
+          <div class="product">
+            <div class="image">
+              <img src="vintage-1.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Vintage shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="vintage-2.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Vintage shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="vintage-3.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Vintage shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="vintage-4.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Vintage shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="vintage-5.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Vintage shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="vintage-6.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Vintage shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="jacket-5.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Jacket</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="jacket-6.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Jacket </h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
 
 
-/*-- main --*/
-main{
-    min-height: 100vh;
-}
-/* banner */
-main .banner{
-    padding: 10px 5%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 50%));
-    grid-auto-rows: minmax(auto);
-    grid-gap: 1rem;
-}
-main .left-banner,
-main .right-banner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-main .left-banner h3{
-    color: #000000a6;
-}
-main .left-banner h2{
-    font-size: 50px;
-}
-main .left-banner h2 span{
-    color: #ff9500;
-}
-main .left-banner small{
-    color: #5353538a;
-    font-size: 15px;
-}
-main .left-banner button{
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: 3px solid #ff9500;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    padding: 10px 15px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-}
-main .left-banner button:hover{
-    transform: scale(1.1);
-    color: #fff;
-    background: #ff9500;
-}
-main .right-banner img{
-    width: 33vw;
-}
-/* banner */
+        </div>
+    </div>
+    <!--featured-products--->
+
+    <!--promo-->
+    <div class="promo">
+      <div class="content">
+        <div class="service">
+        <h3>Repair Services</h3>
+        <h2>Up to 70% off - All t-Shirts & Accessories</h2>
+        <small>Customer black friday </small>
+        <a href="#"><button type="submit" name="button">Explore More</button></a>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="promo-1.png" alt="">
+      </div>
+    </div>
+    <!--promo-->
+
+    <!--new-arrivals--->
+      <div class="all-products">
+        <div class="title">
+          <h1>new-arrivals</h1>
+          <small>Summer Collection New Modern Design</small>
+        </div>
+
+        <div class="products">
+          <div class="product">
+            <div class="image">
+              <img src="jacket-1.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Addidas T-shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="jacket-2.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Addidas T-shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="jacket-3.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Addidas T-shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="jacket-4.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Addidas T-shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="jacket-6.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Addidas T-shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="jacket-7.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Addidas T-shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="shirt-2.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Addidas T-shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="image">
+              <img src="shirt-3.jpg" alt="">
+            </div>
+            <h4>farfetch</h4>
+            <h3>Addidas T-shirt</h3>
+
+            <div class="sale">
+              <div class="">
+                <p>star</p>
+                <h3>$125</h3>
+              </div>
+
+              <div class="add">
+                <img src="cart.png" alt="">
+              </div>
+            </div>
+          </div>
 
 
-/* featured-products */
-.all-products
-{
-    padding: 10px 5%;
-    background-color: #fff;
-}
-.all-products h1{
-  text-transform: capitalize;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.all-products small{
-  color: #999;
-  font-family: cursive;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.all-products .products{
-    display: grid;
-    grid-template-columns: repeat(4, minmax(auto, 255px));
-    grid-auto-rows: auto;
-    grid-gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0px;
-}
-.all-products .products .product{
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 5px 10px 15px rgb(0, 0, 0, 0.2);
-    transition: all .5s ease-in-out;
-}
-.all-products .products .product:hover{
-    transform: scale(1.1);
-}
-.all-products .products .product .image img{
-width: 100%;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 10px;
-}
-.all-products .products .product h4{
-font-family: cursive;
-font-size: 15px;
-color: #999;
-}
-.all-products .products .product h3{
-font-size: 18px;
-}
-.all-products .products .product .sale{
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-.all-products .products .product .sale p{
-/*for more styling*/
-}
-.all-products .products .product .sale h3{
-color: green;
-}
-.all-products .products .product .add{
-border: 1px solid green;
-padding: 5px;
-border-radius: 50%;
-background: #ddd;
-cursor: pointer;
-}
-.all-products .products .product .add:hover{
-background: #fff;
-}
-@media screen and (max-width: 990px) {
-    .all-products .products{
-      display: grid;
-      grid-template-columns: repeat(2, minmax(auto, 500px));
-      grid-auto-rows: auto;
-      grid-gap: 1.5rem;
-      align-items: center;
-      justify-content: center;
-      margin: 30px 0px;
-    }
-}
-@media screen and (max-width: 690px) {
-.all-products .products{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 255px));
-    grid-auto-rows: auto;
-    grid-gap: 1.5rem;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0px;
-}
-}
-@media screen and (max-width: 490px) {
-    main .right-banner img{
-        display: none;
-    }
-    main .banner{
-        display: flex;
-        flex-direction: column;
-    }
-    main .left-banner{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    main .right-banner{
-        display: none;
-    }
-}
+          </div>
+      </div>
+    <!--new-arrivals--->
 
-/* featured-products */
+    <!--promo 2--->
+      <div class="promo-2">
+        <div class="content-1 ads">
+          <div>
+            <h3>Crazy deals</h3>
+            <h2>Buy 1 get 1 free</h2>
+            <small>The best classic dress is on sale at cara</small>
+            <a href="#"><button type="submit" name="button">Learn More</button></a>
+          </div>
+        </div>
 
-/*-----promo----*/
-.promo{
-    padding: 10px 5%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 50%));
-    grid-auto-rows: minmax(auto);
-    grid-gap: 1rem;
-}
-.promo .content{
-    padding-left: 50px;
-}
-.promo .content,
-.promo .image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.promo h3{
-    color: #ff9500;
-    padding-bottom: 10px;
-}
-.promo h2{
-    color: #333333;
-    font-size: 30px;
-}
-.promo small{
-    color: #5353538a;
-    font-size: 15px;
-}
-.promo button{
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: 3px solid #ff9500;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    padding: 10px 15px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-}
-.promo button:hover{
-    transform: scale(1.1);
-    color: #fff;
-    background: #ff9500;
-}
-.promo .image img{
-    width: 33vw;
-}
-/* second promo */
-.promo-2{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 600px));
-    grid-auto-rows: minmax(auto);
-    grid-gap: 1.5rem;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0px;
-}
-.promo-2 .ads{
-    padding: 30px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 5px;
-    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.3);
-}
-.promo-2 .content-1{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(promo-2.jpg);
-}
-.promo-2 .content-2{
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(promo-3.jpg);
-}
-.promo-2 .content-1 div,
-.promo-2 .content-2 div{
-  padding: 80px;
-}
-.promo-2 h2,
-.promo-2 small{
-  color: #fff;
-  font-size: 1.1em;
-}
-.promo-2 h3 {
-    color: #ff9500;
-    padding-bottom: 10px;
-}
-.promo-2 button {
-    padding: 5px 50px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
-    border: 3px solid #ff9500;
-    font-size: 18px;
-    cursor: pointer;
-}
-.promo-2 button:hover{
-    color: #fff;
-    background: #ff9500;
-}
-@media screen and (max-width: 990px) {
-    .promo-2{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .ads{
-      width: 90vw;
-      height: 500px;
-    }
-  }
-  @media screen and (max-width: 690px) {
-    .promo-2{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .ads{
-      width: 80vw;
-      height: auto;
-    }
-    .promo-2 .content-1 div,
-    .promo-2 .content-2 div{
-      padding: 10px;
-    }
-  }
-/*-----promo----*/
+        <div class="content-2 ads">
+          <div>
+            <h3>Spring/Summer</h3>
+            <h2>upcomming season</h2>
+            <small>The best classic dress is on sale at cara </small>
+            <a href="#"><button type="submit" name="button">Collection</button></a>
+          </div>
+        </div>
+      </div>
+    <!--promo 2--->
+
+    <!-----newsletter---->
+    <div class="newsletter">
+      <div class="action">
+        <div>
+          <h3>Sign up for newsletters</h3>
+        <small>Get E-mail updates about our latest shop & <span>special offers.</span></small>
+        </div>
+      </div>
+
+      <div class="form">
+        <form action="https://formsubmit.co/54578cfad6891e593d296a9c0fdf4f11" method="POST">
+          <input type="email" name="Email" placeholder="Your email address" required/>
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <!-----newsletter---->
 
 
-/*-----newsletter----*/
-.newsletter{
-    padding: 50px 5%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(auto, 50%));
-    grid-auto-rows: minmax(auto);
-    grid-gap: 1rem;
-    background: #010b28f2;
-    text-transform: capitalize;
-}
-.newsletter .action,
-.newsletter .form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.newsletter .action{
-    margin-bottom: 20px;
-}
-.newsletter .action h3{
-font-size: 23px;
-color: #fff;
-padding-bottom: 10px;
-}
-.newsletter .action small{
-font-size: 15px;
-color: #999;
-}
-.newsletter .action span{
-color: #ff9500;
-}
-.newsletter form input{
-width: 360px;
-padding: 15px;
-margin: 0px;
-border-radius: 2px;
-border: none;
-outline: none;
-color: #333;
-font-size: 15px;
-}
-.newsletter form button{
-    width: 100px;
-    padding: 15px;
-    background: #ff9500;
-    color: #fff;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-}
-.newsletter form button:hover{
-    opacity: .8;
-}
-@media screen and (max-width: 990px) {
-    .newsletter{
-       gap: 2rem; 
-    }
-    .newsletter form button{
-        width: 360px;
-    }
-}
-@media screen and (max-width: 690px) {
-    .newsletter{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .newsletter form button{
-        width: 360px;
-    }
-}
-/*-----newsletter----*/
+    </main>
+    <footer>
+      <nav>
+        
+        <div class="list-1">
+          <div class="logo">
+            <a href="#">Oghene<span>Shop</span></a>
+          </div>
+          <h3>My Account</h3>
+          <ul>
+            <li><a href="#" class="sign">Sign In</a></li>
+            <li><a href="#">View cart</a></li>
+            <li><a href="#">My Wishlist</a></li>
+            <li><a href="#">Track My Order</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
 
+        <div class="list-2">
+          <h2>Quick links</h2>
+          <ul>
+            <li><a href="#"><span>Home</span></a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
 
+        <div class="list-3">
+          <h2 id="contact">Contact us</h2>
+          <ul>
+            <li><a href="#">Phone: +234-81402-927-61</a></li>
+            <li><a href="#">Email: Ogheneagba@gmail.com</a></li>
+            <li><a href="#">Location: Nigeria, Delta - N0.11</a></li>
+          </ul>
+        </div>
 
-/*-- main --*/
+      </nav>
 
-
-
-/*-- footer --*/
-footer nav{
-    padding: 15px 5%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(auto, 50%));
-    grid-auto-rows: minmax(auto);
-    grid-gap: 1.5rem;
-    justify-content: center;
-}
-footer nav .logo{
-    color: #333;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-footer nav .logo a{
-    border: none;
-}
-footer h3{
-    padding-top: 10px;
-}
-footer a{
-    color: #999;
-}
-footer ul a:hover{
-    border-bottom: 2px solid #ff9500;
-    padding-bottom: 5px;
-}
-footer li{
-    padding: 10px 0px;
-}
-footer .sign{
-    border-bottom: 2px solid #ff9500;
-    padding-bottom: 5px;
-}
-footer nav .logo span{
-    color: #ff9500;
-}
-footer .licence{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-    font-size: 16px;
-}
-@media screen and (max-width: 690px) {
-    footer nav{
-        padding: 15px 5%;
-        display: flex;
-        flex-direction: column;
-        grid-gap: 1.5rem;
-    }
-}
-/*-- footer --*/
+      <span class="licence">&copy; 2022 Ogheneagba | All rights reserved.</span>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
