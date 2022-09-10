@@ -16,6 +16,7 @@ header{
     left: 0;
     right: 0;
     background-color: #efefef;
+    z-index: 100;
 }
 header nav{
     display: flex;
@@ -202,7 +203,7 @@ main .right-banner img{
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 255px));
     grid-auto-rows: auto;
-    grid-gap: 1.5rem;
+    grid-gap: 2rem;
     align-items: center;
     justify-content: center;
     margin: 30px 0px;
@@ -211,6 +212,10 @@ main .right-banner img{
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 10px 15px rgb(0, 0, 0, 0.2);
+    transition: all .5s ease-in-out;
+}
+.all-products .products .product:hover{
+    transform: scale(1.1);
 }
 .all-products .products .product .image img{
 width: 100%;
@@ -415,6 +420,18 @@ background: #fff;
       padding: 10px;
     }
   }
+
+  
+  @media screen and (max-width: 350px) {
+    .promo-2 button{
+        padding: 5px 10px;
+      }
+}
+@media screen and (max-width: 230px) {
+    .promo-2 button{
+        padding: 5px 10px;
+      }
+}
 /*-----promo----*/
 
 
@@ -487,6 +504,26 @@ font-size: 15px;
     }
     .newsletter form button{
         width: 360px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .newsletter{
+       gap: 2rem; 
+    }
+    .newsletter form input,
+    .newsletter form button{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 230px) {
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .newsletter form input,
+    .newsletter form button{
+        width: 100px;
     }
 }
 /*-----newsletter----*/
